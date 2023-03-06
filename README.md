@@ -1,3 +1,3 @@
 # space-invaders
-this is a clone of the retro space invaders game
+this is a clone of the game Space Invaders
 currently WIP
