@@ -5,8 +5,8 @@ function preload() {
 let playerPos;
 let bulletsX = [];
 let bulletsY = [];
-let bulletSpeed = 5;
-let movementSpeed = 5;
+let bulletSpeed = 10;
+let movementSpeed = 10;
 let bulletCanSpawn = true;
 let score;
 let health;
@@ -28,7 +28,6 @@ let shieldPosY = [
 	[[680, 660, 640],[660, 640,],[660, 640],[680, 660, 640]],
 	[[680, 660, 640],[660, 640,],[660, 640],[680, 660, 640]]
 ];
- /* (0, 255, 0); */
 let shieldPictureR = [
 	[[0, 0, 0],[0, 0],[0, 0],[0, 0, 0]],
 	[[0, 0, 0],[0, 0],[0, 0],[0, 0, 0]],
@@ -159,15 +158,15 @@ function draw() {
 					fill(shieldPictureR[block][collumns][piece], shieldPictureG[block][collumns][piece], shieldPictureB[block][collumns][piece], shieldPictureO[block][collumns][piece])
 					rect(shieldPosX[block][collumns][piece], shieldPosY[block][collumns][piece], 20, -20)
 				}
-				
-				
 			}
 		}
 	}
+
+	/* enemies */
 }
 
 function keyTyped() {
-	if (key === "f") {
+	if (key === 'f') {
 		spawnBullet(playerPos);
 		bulletCanSpawn = false;
 	}
