@@ -347,6 +347,7 @@ function keyTyped() {
 	if (key === "f") {
 		spawnBullet(playerPos);
 		bulletCanSpawn = false;
+		console.log('Bullet Fired')
 	}
 }
 
