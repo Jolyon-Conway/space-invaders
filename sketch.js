@@ -1,3 +1,5 @@
+/** @format */
+
 let playerPos;
 let bulletsX = [];
 let bulletsY = [];
@@ -193,8 +195,7 @@ let shieldPictureO = [
 /* enemies */
 
 /* row 1 */
-let row1X = []
-
+let row1X = [];
 
 function setup() {
 	createCanvas(1200, 741);
@@ -261,7 +262,11 @@ function draw() {
 		/* shields */
 		for (let block = 0; block < shieldPosX.length; block++) {
 			for (let collumns = 0; collumns < shieldPosX[block].length; collumns++) {
-				for (let piece = 0; piece < shieldPosX[block][collumns].length; piece++) {
+				for (
+					let piece = 0;
+					piece < shieldPosX[block][collumns].length;
+					piece++
+				) {
 					for (
 						let bulletsIndex = 0;
 						bulletsIndex < bulletsX.length;
@@ -269,12 +274,14 @@ function draw() {
 					) {
 						if (
 							bulletsX[bulletsIndex] >= shieldPosX[block][collumns][piece] &&
-							bulletsX[bulletsIndex] <= shieldPosX[block][collumns][piece] + 20 &&
+							bulletsX[bulletsIndex] <=
+								shieldPosX[block][collumns][piece] + 20 &&
 							shieldHealth[block][collumns][piece] > 0
 						) {
 							if (
 								bulletsY[bulletsIndex] <= shieldPosY[block][collumns][piece] &&
-								bulletsY[bulletsIndex] >= shieldPosY[block][collumns][piece] - 20
+								bulletsY[bulletsIndex] >=
+									shieldPosY[block][collumns][piece] - 20
 							) {
 								shieldHealth[block][collumns][piece]--;
 								bulletsY.splice(bulletsIndex, 1);
@@ -326,37 +333,35 @@ function draw() {
 
 		/* enemies */
 	} else {
-		fill(startColour)
-		rect(575, 325, 50, 50,)
-		fill(0)
-		triangle(590, 340, 615, 350, 590, 360)
-		fill(255)
-		textSize(32)
-		text('Press Button To Start', 460, 410)
+		fill(startColour);
+		rect(575, 325, 50, 50);
+		fill(0);
+		triangle(590, 340, 615, 350, 590, 360);
+		fill(255);
+		textSize(32);
+		text("Press Button To Start", 460, 410);
 		if (mouseX >= 575 && mouseX <= 625) {
 			if (mouseY >= 325 && mouseY <= 375) {
-				startColour = 150
+				startColour = 150;
 			} else {
-				startColour = 255
+				startColour = 255;
 			}
 		}
-	}	
+	}
 }
 
 function keyTyped() {
 	if (key === "f") {
 		spawnBullet(playerPos);
 		bulletCanSpawn = false;
-		console.log('Bullet Fired')
 	}
 }
-
 
 function mouseClicked() {
 	if (alive == false) {
 		if (mouseX >= 575 && mouseX <= 625) {
 			if (mouseY >= 325 && mouseY <= 375) {
-				alive = true
+				alive = true;
 			}
 		}
 	}
