@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/Jolyon-Conway/space-invaders"><img src="images/Spaceinvaders.png" alt="Space Invaders" width="200">.js</a>
+  <a href="https://github.com/Jolyon-Conway/space-invaders"><img src="images/Spaceinvaders.png" alt="Space Invaders" width="400">.js</a>
   <br>
 </h1>
 
